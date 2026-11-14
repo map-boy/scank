@@ -1,0 +1,23 @@
+{
+  "banner": "scank - scalability test. Only test sites you own or have written permission to test.",
+  "guard.invalid": "Invalid URL. Use http:// or https://",
+  "guard.notOwner": "Remote site. Add --confirm-owner to confirm you own it or have written permission.",
+  "warn.localLimit": "Warning: {users} users from one computer. This machine may become the bottleneck, so a FAIL may be the test machine and not the site.",
+  "capped": "Users capped at {max} for runs from one computer.",
+  "step.line": "Step {i}/{n}: {users} users for {sec}s ...",
+  "step.result": "  p50 {p50}ms | p97.5 {p975}ms | errors {err}% | {rps} req/s | {verdict}",
+  "stop.fail": "Stopped early: the site failed at {users} users.",
+  "run.error": "Could not run the test: {msg}",
+  "verdict.PASS": "PASS: the site held up in this test.",
+  "verdict.WARNING": "WARNING: the site held up, but with slow responses or some errors.",
+  "verdict.FAIL": "FAIL: the site broke under load.",
+  "limit.holds": "Holds about {users} users (highest PASS step).",
+  "limit.none": "No step passed.",
+  "weight.title": "Page weight and low-data check (HTML only)",
+  "weight.line": "Size {kb} KB | compression {enc} | HTTPS {https} | cache-control {cache}",
+  "weight.est": "Estimated download of this page: about {s3g}s on 3G (1.6 Mbps), {s4g}s on 4G (10 Mbps).",
+  "weight.fail": "Page weight check failed: {msg}",
+  "disclaimer": "This is a likely-holds estimate from one machine, not a guarantee. Real users differ: slow phones, logins, bursts.",
+  "report.saved": "Report saved: {path}",
+  "graph.title": "p97.5 response time per step (ms)"
+}

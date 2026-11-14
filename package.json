@@ -1,0 +1,24 @@
+{
+  "name": "scank",
+  "version": "0.1.0",
+  "description": "Scalability testing CLI: can my website hold N users? PASS / WARNING / FAIL.",
+  "private": true,
+  "type": "module",
+  "engines": { "node": ">=20" },
+  "scripts": {
+    "scank": "tsx src/cli.ts",
+    "demo-server": "node scripts/demo-server.mjs",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "autocannon": "^9.0.0",
+    "commander": "^15.1.0"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.0",
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2",
+    "vitest": "^5.1.0"
+  }
+}

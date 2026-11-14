@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>scank - can my website hold N users?</title>
+<meta name="description" content="scank is a free command-line tool that tests whether your website can hold N users and answers PASS, WARNING or FAIL.">
+<style>
+:root { --bg:#ffffff; --fg:#14181f; --muted:#5b6575; --card:#f3f5f8; --accent:#0b6bcb; --pass:#1a7f37; --warn:#9a6700; --fail:#cf222e; }
+@media (prefers-color-scheme: dark) { :root { --bg:#0e1116; --fg:#e6e9ef; --muted:#9aa4b2; --card:#171b22; --accent:#58a6ff; --pass:#3fb950; --warn:#d29922; --fail:#f85149; } }
+* { box-sizing: border-box; }
+body { margin:0; background:var(--bg); color:var(--fg); font:16px/1.6 system-ui, Segoe UI, Roboto, Arial, sans-serif; }
+main { max-width: 760px; margin: 0 auto; padding: 32px 18px 64px; }
+h1 { font-size: 2.2rem; margin: 0 0 6px; }
+h2 { margin-top: 36px; }
+p.lead { color: var(--muted); font-size: 1.1rem; margin-top: 0; }
+pre { background: var(--card); padding: 14px; border-radius: 8px; overflow-x: auto; font-size: 0.9rem; }
+code { font-family: ui-monospace, Consolas, monospace; }
+.card { background: var(--card); border-radius: 8px; padding: 14px 16px; margin: 10px 0; }
+.pass { color: var(--pass); font-weight: 700; } .warn { color: var(--warn); font-weight: 700; } .fail { color: var(--fail); font-weight: 700; }
+a { color: var(--accent); }
+a.btn { display:inline-block; background:var(--accent); color:#fff; padding:10px 16px; border-radius:8px; text-decoration:none; margin-top:8px; }
+</style>
+</head>
+<body>
+<main>
+<h1>scank</h1>
+<p class="lead">Can my website hold N users? Enter a URL and a target. Get PASS, WARNING or FAIL.</p>
+<a class="btn" href="https://github.com/map-boy/scank">Get it on GitHub</a>
+
+<h2>How it works</h2>
+<div class="card">It ramps simulated users (1, 10%, 25%, 50%, 100% of your target), measures response time and errors at each step, and stops early if the site breaks.</div>
+<div class="card"><span class="pass">PASS</span> errors under 1% and p97.5 under 2 s<br><span class="warn">WARNING</span> in between<br><span class="fail">FAIL</span> errors over 5% or p97.5 over 5 s</div>
+
+<h2>Three modes</h2>
+<div class="card"><b>quick</b> about 1 minute at 1, 10, 25, 50 users<br><b>target</b> ramp to an exact number, for example 1000<br><b>limit</b> keep doubling users until it breaks</div>
+
+<h2>Low-data check</h2>
+<p>Reports page size, compression, HTTPS and caching, with an estimated download time on 3G and 4G.</p>
+
+<h2>Use it</h2>
+<pre><code>git clone https://github.com/map-boy/scank
+cd scank
+npm install
+npm run scank -- target http://localhost:8080 --users 1000</code></pre>
+
+<h2>Responsible use</h2>
+<p>Only test sites you own or have written permission to test. Remote URLs need <code>--confirm-owner</code>. One computer is not real traffic, so PASS means "likely holds", not a guarantee.</p>
+
+<p style="color:var(--muted);margin-top:40px">scank v0.1 - MIT license - built in Kigali, Rwanda</p>
+</main>
+</body>
+</html>
