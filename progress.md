@@ -18,7 +18,7 @@ Updated: 2026-11-14
 - [x] npm run typecheck passes
 - [x] npm test passes (13 tests)
 - [x] CI workflow file created
-- [ ] CI green on GitHub
+- [x] CI green on GitHub
 
 ## 3. Docs
 - [x] README with unticked launch checklist
@@ -29,4 +29,9 @@ Updated: 2026-11-14
 
 ## 4. Repo
 - [x] LICENSE, CHANGELOG, CONTRIBUTING, SECURITY, CITATION.cff, CODEOWNERS, dependabot
-- [ ] Create GitHub repo and push
+- [x] Create GitHub repo and push (map-boy/scank)
+## 5. Landing page
+- [x] Static landing page in site/ (no build step)
+- [x] Vercel project linked to GitHub, production deploy live
+- [ ] Custom domain
+- [ ] Live in-browser test runner (needs ownership verification first: a public load tool is an abuse risk)

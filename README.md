@@ -4,6 +4,9 @@ Can my website hold N users? scank ramps simulated users against a URL and answe
 
 Status: MVP v0.1 (CLI). Done / not done: [progress.md](progress.md). Docs: [docs/README.md](docs/README.md).
 
+Live page: https://scank.vercel.app
+Repo: https://github.com/map-boy/scank
+
 ## Responsible use
 Only test sites you own or have written permission to test. Remote URLs need `--confirm-owner`.
 

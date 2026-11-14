@@ -6,3 +6,6 @@ reports/
 !.env.example
 *.log
 .vercel
+
+.vercel
+.env*
